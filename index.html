@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Combinados</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- <style>
+        /* Estilo para el Ejercicio 1 */
+        img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+        .borde-rojo {
+            border: 2px solid red;
+        }
+
+        /* Estilo general */
+        section {
+            margin: 20px 0;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Ejercicios Combinados</h1>
+
+    <!-- Ejercicio 1: Imagen con borde rojo -->
+    <section id="ejercicio1">
+        <h2>Ejercicio 1: Imagen con borde rojo</h2>
+        <img src="./assets/img/mortal-kombat-1-ps5.jpg" id="imagen" alt="Imagen">
+    </section>
+
+    <!-- Ejercicio 2: Selección de stickers -->
+    <section id="ejercicio2">
+        <h2>Ejercicio 2: Selección de Stickers</h2>
+        <div class="image-container">
+            <div>
+                <img src="./assets/img/AGS_pulse.webp" alt="Sticker 1">
+                <input type="number" id="sticker1" min="0" max="9" value="0">
+            </div>
+            <div>
+                <img src="./assets/img/Assegai_pulse.webp" alt="Sticker 2">
+                <input type="number" id="sticker2" min="0" max="9" value="0">
+            </div>
+            <div>
+                <img src="./assets/img/Feisarpulse.webp" alt="Sticker 3">
+                <input type="number" id="sticker3" min="0" max="9" value="0">
+            </div>
+        </div>
+        <p id="mensaje"></p>
+    </section>
+    
+    <!-- Ejercicio 3: Verificación de password -->
+    <section id="ejercicio3">
+        <h2>Ejercicio 3: Verificación de Password</h2>
+        <div class="password-container">
+            <div class="selects-container">
+                <select id="select1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <select id="select2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <select id="select3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </div>
+            <button id="ingresar">Ingresar</button>
+        </div>
+        <p id="passwordMessage"></p>
+    </section>
+    
+    
+
+    <script>
+        // Ejercicio 1: Imagen con borde rojo
+        const imagen = document.getElementById('imagen');
+        imagen.addEventListener('click', function() {
+            imagen.classList.toggle('borde-rojo');
+        });
+
+        // Ejercicio 2: Selección de stickers
+        const sticker1 = document.getElementById('sticker1');
+        const sticker2 = document.getElementById('sticker2');
+        const sticker3 = document.getElementById('sticker3');
+        const mensaje = document.getElementById('mensaje');
+
+        function verificarCantidad() {
+            const total = parseInt(sticker1.value) + parseInt(sticker2.value) + parseInt(sticker3.value);
+            if (total <= 10) {
+                mensaje.textContent = `Llevas ${total} stickers`;
+            } else {
+                mensaje.textContent = "Llevas demasiados stickers";
+            }
+        }
+
+        sticker1.addEventListener('input', verificarCantidad);
+        sticker2.addEventListener('input', verificarCantidad);
+        sticker3.addEventListener('input', verificarCantidad);
+
+        // Ejercicio 3: Verificación de password
+        const select1 = document.getElementById('select1');
+        const select2 = document.getElementById('select2');
+        const select3 = document.getElementById('select3');
+        const ingresar = document.getElementById('ingresar');
+        const passwordMessage = document.getElementById('passwordMessage');
+
+        ingresar.addEventListener('click', function() {
+            const password = select1.value + select2.value + select3.value;
+
+            if (password === '911') {
+                passwordMessage.textContent = 'Password 1 correcto';
+            } else if (password === '714') {
+                passwordMessage.textContent = 'Password 2 correcto';
+            } else {
+                passwordMessage.textContent = 'Password incorrecto';
+            }
+        });
+    </script>
+</body>
+</html>

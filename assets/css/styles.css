@@ -1,0 +1,136 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor para alinear imágenes horizontalmente */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 10px;
+}
+
+/* Estilos para imágenes */
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.borde-rojo {
+    border: 2px solid red;
+}
+
+/* Inputs y botones */
+input[type="number"], select {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Párrafos */
+p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+p#mensaje {
+    margin-top: 20px;
+    color: #333;
+}
+
+p#passwordMessage {
+    margin-top: 20px;
+    color: #f44336;
+}
+/* Contenedor principal del ejercicio */
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre los contenedores */
+    margin: 20px 0;
+}
+
+/* Contenedor de los selects */
+.selects-container {
+    display: flex;
+    justify-content: center; /* Alineación horizontal */
+    gap: 10px; /* Espaciado entre los selects */
+}
+
+/* Estilo de los selects */
+.selects-container select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo del botón */
+.password-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password-container button:hover {
+    background-color: #0056b3;
+}
